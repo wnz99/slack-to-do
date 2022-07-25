@@ -48,24 +48,13 @@ export type Task = {
   isCompleted: boolean
 }
 
-export type Context = {
-  dbClient: DbClient
-}
-
 export type ActionMw<T extends BlockAction = BlockAction> = Middleware<
-  SlackActionMiddlewareArgs<T>,
-  Context
+  SlackActionMiddlewareArgs<T>
 >
 
-export type ViewMw = Middleware<
-  SlackViewMiddlewareArgs<SlackViewAction>,
-  Context
->
+export type ViewMw = Middleware<SlackViewMiddlewareArgs<SlackViewAction>>
 
-export type EventMw<T extends string> = Middleware<
-  SlackEventMiddlewareArgs<T>,
-  Context
->
+export type EventMw<T extends string> = Middleware<SlackEventMiddlewareArgs<T>>
 
 export type TasksList = {
   tasks: TaskDocument[]

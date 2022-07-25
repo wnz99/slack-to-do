@@ -1,1 +1,1 @@
-export const TASKS_PER_PAGE = 5
+export const TASKS_PER_PAGE = 100

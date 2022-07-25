@@ -1,4 +1,3 @@
-import format from 'date-fns/format'
 import {
   Actions,
   Button,
@@ -7,6 +6,7 @@ import {
   Section,
 } from 'slack-block-builder'
 
+import { renderDate } from '../lib/utils'
 import { TasksList, UserActions } from '../types'
 
 export const tasksList = ({ tasks, perPage, page }: TasksList) =>
@@ -22,14 +22,7 @@ export const tasksList = ({ tasks, perPage, page }: TasksList) =>
         text: `*${item.title}* ${item.isCompleted ? ':white_check_mark:' : ''}`,
       }),
       Section({
-        text: `Due Date: ${
-          item.dueDate
-            ? format(
-                new Date(Number(item.dueDate) * 1000).getTime(),
-                'dd/MM/yyyy'
-              )
-            : 'none'
-        }`,
+        text: `Due Date: ${renderDate(item.dueDate)}`,
       }),
       Actions().elements(
         Button({ text: 'View' })

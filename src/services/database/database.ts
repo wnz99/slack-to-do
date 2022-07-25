@@ -17,8 +17,6 @@ export const initDataBase = (config: Config) => {
       const snapshot = await userTasksRef
         .orderBy('isCompleted', 'asc')
         .orderBy('createdAt', 'desc')
-        // .startAt(page)
-        // .limit(2)
         .get()
 
       if (snapshot.empty) {

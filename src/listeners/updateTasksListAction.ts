@@ -22,8 +22,6 @@ export const updateTasksListAction = ({
       perPage: TASKS_PER_PAGE,
     })
 
-    console.log('updateTasksListAction')
-
     const blocks = homeTab(tasksBlocks)
 
     await client.views.publish({

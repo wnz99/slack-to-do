@@ -8,23 +8,15 @@ export const appHomeOpenedEvent = ({
   return async ({ event, client, body }) => {
     const tasks = await dbClient.getTasks(event.user)
 
-    console.log(tasks)
-
     const tasksBlocks = tasksList({
       tasks,
       page: 1,
       perPage: TASKS_PER_PAGE,
     })
 
-    console.log('blocks')
-
     const blocks = homeTab(tasksBlocks)
 
-    console.log('home')
-
     if (body.view) {
-      console.log('body.view')
-
       await client.views.update({
         user_id: event.user,
         view: {

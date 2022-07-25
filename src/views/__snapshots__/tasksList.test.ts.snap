@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tasksList should render without errors 1`] = `
+Array [
+  DividerBuilder {
+    "props": Object {},
+  },
+  SectionBuilder {
+    "props": Object {
+      "text": "*6* ",
+    },
+  },
+  SectionBuilder {
+    "props": Object {
+      "text": "Due Date: none",
+    },
+  },
+  ActionsBuilder {
+    "props": Object {
+      "elements": Array [
+        ButtonBuilder {
+          "props": Object {
+            "actionId": "view_task",
+            "text": "View",
+            "value": "{\\"taskId\\":\\"M4ISI5reY86oEQ36Xhiw\\"}",
+          },
+        },
+        ButtonBuilder {
+          "props": Object {
+            "actionId": "set_task_complete",
+            "text": "Complete",
+            "value": "{\\"taskId\\":\\"M4ISI5reY86oEQ36Xhiw\\",\\"value\\":true}",
+          },
+        },
+      ],
+    },
+  },
+  DividerBuilder {
+    "props": Object {},
+  },
+  SectionBuilder {
+    "props": Object {
+      "text": "*6* ",
+    },
+  },
+  SectionBuilder {
+    "props": Object {
+      "text": "Due Date: none",
+    },
+  },
+  ActionsBuilder {
+    "props": Object {
+      "elements": Array [
+        ButtonBuilder {
+          "props": Object {
+            "actionId": "view_task",
+            "text": "View",
+            "value": "{\\"taskId\\":\\"Qcks3amXXe3lNHe7J2vk\\"}",
+          },
+        },
+        ButtonBuilder {
+          "props": Object {
+            "actionId": "set_task_complete",
+            "text": "Complete",
+            "value": "{\\"taskId\\":\\"Qcks3amXXe3lNHe7J2vk\\",\\"value\\":true}",
+          },
+        },
+      ],
+    },
+  },
+]
+`;

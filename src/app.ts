@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-vars */
 import { App, LogLevel } from '@slack/bolt'
 
 import { initConfig } from './config'
@@ -19,19 +17,10 @@ const config = initConfig()
 
 const dbClient = initDataBase(config)
 
-console.log(dbClient)
-
 const app = new App({
   token: config.slack.botToken,
   signingSecret: config.slack.signingSecret,
   logLevel: LogLevel.DEBUG,
-})
-
-app.use(async (params) => {
-  // console.log(params)
-  params.context.dbClient = dbClient
-
-  await params.next()
 })
 
 app.event('app_home_opened', appHomeOpenedEvent({ dbClient }))
